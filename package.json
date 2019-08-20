@@ -1,0 +1,27 @@
+{
+    "name": "testcafe-curse",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test:all": "testcafe all ./tests",
+        "test:chrome": "testcafe chrome ./tests",
+        "test:chrome:5": "testcafe -c 5 chrome ./tests",
+        "test:multiple": "testcafe chrome,firefox ./tests",
+        "test:chrome:fullscreen": "testcafe \"chrome --start-fullscreen\" ./tests",
+        "test:chrome:headless": "testcafe \"chrome:headless --start-fullscreen\" ./tests",
+        "test:chrome:mobile": "testcafe \"chrome:emulation:device=iphone X\" ./tests",
+        "test:firefox": "testcafe \"firefox --start-fullscreen\" ./tests",
+        "test:safari": "testcafe \"safari --start-fullscreen\" ./tests",
+        "functional:smoke:chrome:windows10": "testcafe \"browserstack:chrome:Windows 10\" ./tests/ -T \"Smoke:.*\" --selector-timeout 15000 --assertion-timeout 15000 -e -q -c 2"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^8.1.0"
+    },
+    "devDependencies": {
+        "testcafe": "^1.1.0",
+        "testcafe-browser-provider-browserstack": "^1.8.0"
+    }
+}
